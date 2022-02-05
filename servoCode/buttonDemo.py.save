@@ -1,0 +1,11 @@
+from gpiozero import Button, LED
+import time
+button = Button(23)
+green = LED(25)
+
+ledState = True
+
+while True:
+	button.wait_for_press()
+	ledState = False
+	button.wait_for_release()
